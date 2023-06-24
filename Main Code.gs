@@ -98,8 +98,6 @@ MailApp.sendEmail({
     htmlBody: bbody,
      
   });
-  
-  //////log all
   obj.status="Done";
   log(obj);
 }
@@ -116,7 +114,7 @@ function log(obj){
   var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("log");
   ss.appendRow([new Date(),obj.fname,obj.email,obj.event_type,obj.greet,obj.msg,obj.img,obj.status]);
   //Logger.log(obj);
-  //sendMail(obj);
+  
 }
 
 
